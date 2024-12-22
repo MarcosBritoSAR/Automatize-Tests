@@ -1,7 +1,9 @@
 package com.marcosbrito.compass.semana8.automatize_test.domain;
 
+import static com.marcosbrito.compass.semana8.automatize_test.common.constantPlanet.PLANET;
 import com.marcosbrito.compass.semana8.automatize_test.web.service.PlanetService;
 import lombok.RequiredArgsConstructor;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -15,6 +17,15 @@ public class PlanetServiceTest {
 
 @Test
     public void createPlanet_WithDataValid_restr_returnsPlanet(){
+
+    //sut -> System Under Test
+    /*
+    Por padroes chamamos os nossos objeto de sut, que siguinifica
+        - Sistema sobre testes
+     */
+    Planet sut = planetService.create(PLANET);
+
+    Assertions.assertEquals(PLANET, sut);
 
     }
 
