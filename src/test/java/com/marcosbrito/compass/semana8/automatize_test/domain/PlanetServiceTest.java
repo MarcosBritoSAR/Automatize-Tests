@@ -23,6 +23,7 @@ public class PlanetServiceTest {
     Por padroes chamamos os nossos objeto de sut, que siguinifica
         - Sistema sobre testes
      */
+
     Planet sut = planetService.create(PLANET);
 
     Assertions.assertEquals(PLANET, sut);
