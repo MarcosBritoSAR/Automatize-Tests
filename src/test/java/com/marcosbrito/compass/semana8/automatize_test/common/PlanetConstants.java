@@ -1,4 +1,4 @@
-package com.marcosbrito.compass.common;
+package com.marcosbrito.compass.semana8.automatize_test.common;
 
 import com.marcosbrito.compass.semana8.automatize_test.domain.Planet;
 

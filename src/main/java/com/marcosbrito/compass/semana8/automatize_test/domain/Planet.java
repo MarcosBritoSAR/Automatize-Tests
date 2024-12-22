@@ -1,6 +1,6 @@
 package com.marcosbrito.compass.semana8.automatize_test.domain;
 
-import org.apache.commons.lang3.builder.EqualsBuilder;
+
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -11,7 +11,7 @@ import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 
-@Getter @Setter @NoArgsConstructor @AllArgsConstructor @ToString
+@Getter @Setter @NoArgsConstructor @AllArgsConstructor @ToString @EqualsAndHashCode
 @Entity
 @Table(name = "planet")
 public class Planet {
@@ -38,9 +38,5 @@ public class Planet {
         this.terrain = terrain;
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        //Só usei por que a moça disse que é uma classe bastante famosa.
-      return  EqualsBuilder.reflectionEquals(obj,this);
-    }
+
 }

@@ -1,5 +1,6 @@
-package com.marcosbrito.compass.domain;
+package com.marcosbrito.compass.semana8.automatize_test.domain;
 
+import static com.marcosbrito.compass.semana8.automatize_test.common.PlanetConstants.*;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
@@ -14,12 +15,6 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.data.domain.Example;
 
-
-import static com.marcosbrito.compass.common.PlanetConstants.*;
-
-import com.marcosbrito.compass.semana8.automatize_test.domain.Planet;
-import com.marcosbrito.compass.semana8.automatize_test.domain.PlanetRepository;
-import com.marcosbrito.compass.semana8.automatize_test.domain.QueryBuilder;
 
 @DataJpaTest
 public class PlanetRepositoryTest {

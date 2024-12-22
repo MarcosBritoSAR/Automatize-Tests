@@ -1,6 +1,7 @@
 
-package com.marcosbrito.compass.domain;
+package com.marcosbrito.compass.semana8.automatize_test.domain;
 
+import static com.marcosbrito.compass.semana8.automatize_test.common.PlanetConstants.*;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatCode;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
@@ -20,12 +21,6 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.data.domain.Example;
 
-import static com.marcosbrito.compass.common.PlanetConstants.*;
-
-import com.marcosbrito.compass.semana8.automatize_test.domain.Planet;
-import com.marcosbrito.compass.semana8.automatize_test.domain.PlanetRepository;
-import com.marcosbrito.compass.semana8.automatize_test.domain.PlanetService;
-import com.marcosbrito.compass.semana8.automatize_test.domain.QueryBuilder;
 
 @ExtendWith(MockitoExtension.class)
 public class PlanetServiceTest {
