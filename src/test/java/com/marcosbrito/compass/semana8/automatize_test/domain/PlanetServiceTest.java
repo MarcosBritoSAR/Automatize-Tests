@@ -19,17 +19,16 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-@SpringBootTest(classes = PlanetService.class)
 @ExtendWith(MockitoExtension.class)
 //informa ao spring que isso aqui é uma classe de teste e que precisa do uso de Beans
 public class PlanetServiceTest {
     /*
     Vou precisar testar minha unidade de teste service.
      */
-    @Autowired
+    @InjectMocks //Cria uma instancia valida do objeto
     private PlanetService planetService;
 
-    @MockBean
+    @Mock //Não tenho mais o contexto do Spring pra usar o @MockBean
     private PlanetRepository planetRepository;
 
 
