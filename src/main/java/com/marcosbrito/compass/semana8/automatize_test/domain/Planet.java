@@ -23,6 +23,11 @@ public class Planet {
         this.terrain = terrain;
     }
 
+    public Planet(String climate, String terrain) {
+        this.climate = climate;
+        this.terrain = terrain;
+    }
+
     @Override
     public boolean equals(Object obj) {
         //Só usei por que a moça disse que é uma classe bastante famosa.
