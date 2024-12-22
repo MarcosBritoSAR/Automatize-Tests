@@ -1,6 +1,7 @@
 package com.marcosbrito.compass.semana8.automatize_test.domain;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 
@@ -8,12 +9,14 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 @Entity
 @Table(name = "planet")
 public class Planet {
-
+ 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    @NotBlank
     private String name;
+    @NotBlank
     private String climate;
     private String terrain;
 
