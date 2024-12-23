@@ -22,8 +22,8 @@ public class Planet {
 
     @NotBlank
     @Column(unique = true)
-
     private String name;
+    
     private String climate;
     private String terrain;
 

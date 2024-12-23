@@ -6,6 +6,8 @@ import java.util.Optional;
 import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Service;
 
+import jakarta.validation.Valid;
+
 @Service
 public class PlanetService {
   private PlanetRepository planetRepository;
@@ -14,7 +16,7 @@ public class PlanetService {
     this.planetRepository = planetRepository;
   }
 
-  public Planet create(Planet planet) {
+  public Planet create(@Valid Planet planet) {
     return planetRepository.save(planet);
   }
 
