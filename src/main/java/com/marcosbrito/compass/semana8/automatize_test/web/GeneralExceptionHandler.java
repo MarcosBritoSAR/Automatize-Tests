@@ -2,6 +2,7 @@ package com.marcosbrito.compass.semana8.automatize_test.web;
 
 
 import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
@@ -29,9 +30,10 @@ public class GeneralExceptionHandler extends ResponseEntityExceptionHandler {
         .body(exception.getMessage());
   }
 
-  // @ExceptionHandler(EmptyResultDataAccessException.class)
-  // private ResponseEntity<Object> handleBadRequest(EmptyResultDataAccessException exception) {
-  //   return ResponseEntity.status(HttpStatus.NOT_FOUND)
-  //       .body(exception.getMessage());
-  // }
+  @ExceptionHandler(EmptyResultDataAccessException.class)
+  private ResponseEntity<Object> handleBadRequest(EmptyResultDataAccessException exception) {
+    return ResponseEntity.status(HttpStatus.NOT_FOUND)
+        .body(exception.getMessage());
+  }
+
 }
