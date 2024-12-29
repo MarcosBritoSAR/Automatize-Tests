@@ -46,7 +46,8 @@ public class PlanetIT {
         assertNotNull(sut.getBody().getId());
         assertEquals(sut.getBody().getName(), PLANET.getName());
         assertEquals(sut.getBody().getClimate(), PLANET.getClimate());
-        assertEquals(sut.getBody().getTerrain(), PLANET.getTerrain());   }
+        assertEquals(sut.getBody().getTerrain(), PLANET.getTerrain());   
+    }
 
 
     @Test
